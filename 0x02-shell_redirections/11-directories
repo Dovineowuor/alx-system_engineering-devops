@@ -1,0 +1,2 @@
+#!/bin/bash
+find . -mindepth 1 -type d -print0 | tr '\0\n' '\n\0' | wc -l
