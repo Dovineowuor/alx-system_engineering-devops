@@ -1,2 +1,2 @@
 #!/bin/bash
-export WATER="ewwatratewa"; export STIR="ti.itirtrtr"
+export WATER="ewwatratewa"\n export STIR="ti.itirtrtr"
