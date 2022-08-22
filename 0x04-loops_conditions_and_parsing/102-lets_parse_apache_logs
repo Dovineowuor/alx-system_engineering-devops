@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # Displays the IP and HTTP code from apache log file
+# script to parse file for IP and HTTP fields using awk
 
 file="apache-access.log"
-awk '{print $1, $9}' "$file"
+awk '{print $1, $9}' $file
