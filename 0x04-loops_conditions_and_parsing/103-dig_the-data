@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# parse log for IP and HTTP
-# calculate and put num occurences up front; order from greatest to least
+# Displays the IP and HTTP code from apache log file in a sorted manner
 
-awk '{print $1,$9}' apache-access.log | sort | uniq -c | sort -rn
+file="apache-access.log"
+awk '{print $1, $9}' "$file" | sort | uniq -c | sort -rn
