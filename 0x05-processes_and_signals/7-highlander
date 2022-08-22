@@ -3,9 +3,23 @@
 # to infinity and beyond indefinitely
 # With a sleep 2 in between each iteration
 # I am invincible!!! when receiving a SIGTERM signal
+# Script receives kill signal from another script running in another terminal
+# Kill signal is caught and ignored; printing message instead
 
-trap 'echo "I am invincible!!!"' 15
-while true; do
-    echo "to infinity and beyond"
+# trap 'echo "I am invincible!!!"' 15
+# while true; do
+#     echo "to infinity and beyond"
+#     sleep 2
+# done
+msg()
+{
+    echo "I am invincible!!!"
+}
+trap "msg" SIGTERM
+
+while true
+do
+    echo "To infinity and beyond"
     sleep 2
+
 done
