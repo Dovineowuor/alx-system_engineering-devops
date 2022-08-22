@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
 # Displays the IP and HTTP code from apache log file in a sorted manner
-
 file="apache-access.log"
-awk '{print $1, $9}' "$file" | sort | uniq -c | sort -rn
+awk '{print $1, $9}' $file | sort | uniq -c | sort -nr
