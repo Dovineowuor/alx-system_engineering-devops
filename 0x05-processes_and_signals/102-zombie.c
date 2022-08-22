@@ -1,33 +1,29 @@
-#!/usr/bin/env bash
-# #!/usr/bin/env bash
-# Start/Stops/Restarts. Script to be used with manage_my_process
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <sys/wait.h>
 
-argv1=$1
-tmpfile="/var/run/my_process.pid"
-
-startLoop_n_createFile()
+/**
+ * main - zombies
+ *
+ * Description: make five zombies
+ * Return: 0 for success
+ */
+int main(void)
 {
-    ./manage_my_process &
-    echo "$!" > "$tmpfile"
-}
-killLoop_n_rmFile()
-{
-    #kill "$(cat "$tmpfile")"
-    sudo pkill -f "./manage_my_process"
-    rm "$tmpfile"
-}
-case "$argv1" in
-    start) echo "manage_my_process started"
-	startLoop_n_createFile
-	;;
-    stop) echo "manage_my_process stopped"
-	killLoop_n_rmFile
-	;;
-    restart) echo "manage_my_process restarted"
-	killLoop_n_rmFile
-	startLoop_n_createFile
-	;;
-    *) echo "Usage: manage_my_process {start|stop|restart}"
-	;;
-esac
+	int i;
+	pid_t pidme;
 
+	i = 0;
+	while (i < 5)
+	{
+		pidme = fork();
+		if (pidme)
+			printf("Zombie process created, PID: %i\n", pidme);
+		else
+			exit(0);
+		i++;
+	}
+	sleep(100);
+	return (0);
+}
