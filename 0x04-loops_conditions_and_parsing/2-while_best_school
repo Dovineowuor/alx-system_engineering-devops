@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-# This script displays Holberton School 10 times using a while loop
-i=1
-while [ $i -le 10 ]
-do
-    echo "Best School"
-    i=$(( i + 1 ))
+# displays Best Holberton School 10 times
+
+COUNTER=1
+while ((COUNTER<=10)); do
+	echo "Best School"
+	((COUNTER++))
 done
