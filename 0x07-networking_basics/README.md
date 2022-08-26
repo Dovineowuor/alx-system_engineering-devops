@@ -33,4 +33,5 @@ Directory Name | Description
 0x07-networking_basics | Main directory with all answer files
 
 ## Author
-[Dovine Owuor](https://linkedin.com/in/dovineowuor
+
+[Dovine Owuor](https://github.com/dovineowuor)
