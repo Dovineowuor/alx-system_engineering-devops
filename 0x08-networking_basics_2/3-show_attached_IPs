@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
-# displays all active IPv4 IPs on this machine
 
-ifconfig | grep "inet addr" | cut -d ":" -f2 | cut -d " " -f1
+# displays all active IPv4 IPs on the machine it’s executed on
+
+ifconfig | awk -F "[: ]+" '/inet addr:/ { print $4 }'
