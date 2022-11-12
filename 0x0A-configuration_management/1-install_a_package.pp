@@ -1,5 +1,5 @@
-# Task 1 - Install puppet linter v. 2.1.1
-package { 'puppet-lint':
+# Task 1 - Install flask v. 2.1.1
+package { 'flask':
   ensure   => '2.1.0',
-  provider => 'flask',
+  provider => 'gem',
 }
