@@ -1,5 +1,5 @@
 # Task 0 - Create a file in temp Using Puppet
-file { '/tmp/school':
+file { '/tmp/holberton':
     ensure  => file,
     path    => '/tmp/school',
     mode    => '0744',
