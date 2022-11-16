@@ -1,28 +1,28 @@
 #!/usr/bin/python3
-'''
-Python script that returns information using REST API
-'''
-import requests
-from sys import argv
-
+"""
+Write a Python script that, using this REST API, for a given employee ID,
+returns information about to do list
+"""
 if __name__ == "__main__":
-    if len(argv) > 1:
-        user = argv[1]
-        url = "https://jsonplaceholder.typicode.com/"
-        req = requests.get("{}users/{}".format(url, user))
-        name = req.json().get("name")
-        if name is not None:
-            jreq = requests.get(
-                "{}users/{}/todos".format(
-                    url, user)).json()
-            alltsk = len(jreq)
-            completedtsk = []
-            for t in jreq:
-                if t.get("completed") is True:
-                    completedtsk.append(t)
-            count = len(completedtsk)
-            print("Employee {} is done with tasks({}/{}):"
-                  .format(name, count, alltsk))
-            for title in completedtsk:
-                print("\t {}".format(title.get("title")))
-                
+
+    import requests
+    import sys
+
+    if len(sys.argv) == 2 and sys.argv[1].isdigit():
+        u_url = 'https://jsonplaceholder.typicode.com/users/'
+        td_url = 'https://jsonplaceholder.typicode.com/todos?userId='
+
+        EMPLOYEE_NAME = requests.get(u_url + sys.argv[1]).json()['name']
+        NUMBER_OF_DONE_TASKS = len([task for task in requests.
+                                    get(td_url + sys.argv[1]).json()
+                                    if task['completed'] is True])
+        TOTAL_NUMBER_OF_TASKS = len(requests.get(td_url + sys.argv[1]).json())
+        DONE_TASKS_TITLES = [task['title'] for task in requests.
+                             get(td_url + sys.argv[1]).json()
+                             if task['completed'] is True]
+
+        print('Employee {} is done with tasks({}/{}):'.
+              format(EMPLOYEE_NAME, NUMBER_OF_DONE_TASKS,
+                     TOTAL_NUMBER_OF_TASKS))
+        for TASK_TITLE in DONE_TASKS_TITLES:
+            print('\t {}'.format(TASK_TITLE))
