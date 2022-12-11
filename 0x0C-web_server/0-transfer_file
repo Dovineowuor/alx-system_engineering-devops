@@ -23,6 +23,9 @@ then
 	scp $ssh_option StrictHostKeyChecking=no "$file_path" "$username@$ip":~/
 fi
 
+ssh -t ubuntu@54.196.45.90 sudo ls ~/
+
+
 # outdated script
 # #!/usr/bin/env bash
 # # script that transfers a file from our client to a server
