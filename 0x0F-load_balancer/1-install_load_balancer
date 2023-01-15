@@ -1,15 +1,10 @@
 #!/usr/bin/env bash
-# sets up a new 404 error page
-sudo apt-get update
-sudo apt-get upgrade -y
-sudo apt install haproxy -y
-sudo echo "ENABLED-=1" >> /etc/default/haproxy
-sudo echo "frontend http_front
-        bind *:80
-        stats uri /haproxy?stats
-        default_backend http_back
-backend http_back
-        balance roundrobin
-        server 33255-web-01 54.196.45.90 check
-        server 33255-web-02 54.90.2.249:80 check" >> /etc/haproxy/haproxy.cfg
-sudo service haproxy start
+#Configures a ubuntu server to install HAProxy
+apt-get -y update
+apt-get -y install --no-install-recommends software-properties-common
+add-apt-repository -y ppa:vbernat/haproxy-2.6
+apt-get -y update
+apt-get -y install haproxy=2.6.\*
+sed -i '/#EXTRAOPTS="-de -m 16"/a ENABLED=1' /etc/default/haproxy
+sed -i '/504.http/a \\nlisten chalo\n\tbind *:80\n\tmode http\n\tbalance roundrobin\n\tserver 37536-web-01 	54.196.45.90:80 check\n\tserver 37536-web-02 54.90.2.249:80 check' /etc/haproxy/haproxy.cfg
+service haproxy start
