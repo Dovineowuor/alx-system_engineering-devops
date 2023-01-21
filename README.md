@@ -1,44 +1,56 @@
 # alx-system_engineering-devops
-This is a repository showcasing programs I wrote as a student in Software engineering ALX Cohort 6.
-[0x00. Shell, basics](/0x00-shell_basics) Day 1 at Holberton school
-0-current_working_directory - Write a script that prints the absolute path name of the current working directory.
+This is a repositories showcase programs I wrote as a student in Software engineering ALX Cohort 6.
 
-[1-listit](1-listit) - Display the contents list of your current directory.
+[0x00. Shell, basics](/0x00-shell_basics) First Experience at Holberton school
 
-[2-bring_me_home](2-bring_me_home) - Write a script that changes the working directory to the user’s home directory. You are not allowed to use any shell variables
+[0x0A. Configuration Management](/0x0A-configuration_management) Managing configuration
 
-[3-listfiles](3-listfiles) - Display current directory contents in a long format
+[0x0B. SSH](/0x0B-ssh) Secure Shell Scripting
 
-[4-listmorefiles](4-listmorefiles) - Display current directory contents, including hidden files (starting with .). Use the long format.
+[0x0C. Web Server](/0x0C-web_server) 
 
-[5-listfilesdigitonly](5-listfilesdigitonly) - Display current directory contents. Long format with user and group IDs displayed numerically And hidden files (starting with .)
+[0x0D. Web Stack Debugging](/0x0D-web_stack_debugging_0) 
 
-[6-firstdirectory](6-firstdirectory) - Create a script that creates a directory named holberton in the /tmp/ directory.
+[0x0F. Load Balancing](/0x0F-load_balancer)
 
-[7-movethatfile](7-movethatfile) - Move the file betty from /tmp/ to /tmp/holberton.
+[0x01. Shell Permission](/0x01-shell_permisions)
 
-[8-firstdelete](8-firstdelete) - Delete the file betty. The file betty is in /tmp/holberton
+[0x1A. Application Server](/0x00-shell_basics) 
 
-[9-firstdirdeletion](9-firstdirdeletion) - Delete the directory holberton that is in the /tmp directory.
+[0x1B. Web Stack Debugging 4](/0x1B-web_stack_debugging_4) 
 
-[10-back](10-back) - Write a script that changes the working directory to the previous one.
+[0x02. Shell Redirection](/0x02-shell_redirections) 
 
-[11-lists](11-lists) - Write a script that lists all files (even ones with names beginning with a period character, which are normally hidden) in the current directory and the parent of the working directory and the /boot directory (in this order), in long format.
+[0x03. Shell Variable Expansion](/0x03-shell_variables_expansions) 
 
-[12-file_type](12-file_type) - Write a script that prints the type of the file named iamafile. The file iamafile will be in the /tmp directory when we will run your script.
+[0x04. Loops, Conditions and parsing](/0x04-loops_conditions_and_parsing)
 
-[13-symbolic_link](13-symbolic_link) - Create a symbolic link to /bin/ls, named ls. The symbolic link should be created in the current working directory.
+[0x05. Processes and Signals](/0x05-processes_and_signals)
 
-[14-copy_html](14-copy_html) - Create a script that copies all the HTML files from the current working directory to the parent of the working directory, but only copy files that did not exist in the parent of the working directory or were newer than the versions in the parent of the working directory. You can consider that all HTML files have the extension .html
+[0x06. Regular Expressions](/0x06-regular_expressions)
 
-[15-lets_move](15-lets_move) - Create a script that moves all files beginning with an uppercase letter to the directory /tmp/u. You can assume that the directory /tmp/u will exist when we will run your script
+[0x07. Networking Basics](/0x07-networking_basics)
 
-[16-clean_emacs](16-clean_emacs) - Create a script that deletes all files in the current working directory that end with the character ~.
+[0x08. Networking Basics 2](/0x08-networking_basics_2)
 
-[17-tree](17-tree) - Create a script that creates the directories welcome/, welcome/to/ and welcome/to/holberton in the current directory. You are only allowed to use two spaces in your script, not more.
+[0x09. Web Infrastracture Design](/0x09-web_infrastracture_design)
 
-[18-commas](18-commas) - Write a command that lists all the files and directories of the current directory, separated by commas (,).
+[0x10. HTTPS / SSL](/0x10-https_ssl/)
 
-Directory names should end with a slash (/) Files and directories starting with a dot (.) should be listed The listing should be alpha ordered, except for the directories . and .. which should be listed at the very beginning Only digits and letters are used to sort; Digits should come first You can assume that all the files we will test with will have at least one letter or one digit The listing should end with a new line.
+[0x11. What Happens When You type [google.com(google.com)] and press enter](/0x11-what_happens_when_your_type_google_com_in_your_browser_and_press_enter/)
 
-[holberton.mgc](holberton.mgc) - Create a magic file holberton.mgc that can be used with the command file to detect Holberton data files. Holberton data files always contain the string HOLBERTON at offset 0.
+[0x12. Web Stack Debugging 2](/0x12-web_stack_debugging_2/)
+
+[0x13. Firewall](/0x13-firewall/)
+
+[0x14. MySQL](/0x14-mysql/)
+
+[0x15. API](/0x15-api/)
+
+[0x16. API Advanced](/0x16-api_advanced)
+
+[0x17. Web Stack Debugging 3](/0x17-web_stack_debugging_3)
+
+[0x19. PostMortem](/0x19-postmortem/)
+
+[0x1A. Application Server](/0x1A-application_server/)
