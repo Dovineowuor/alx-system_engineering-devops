@@ -4,3 +4,5 @@ apt-get update -y
 apt-get install nginx -y
 echo "Hello World!" > /var/www/html/index.html
 service nginx start
+curl 127.0.0.1
+
